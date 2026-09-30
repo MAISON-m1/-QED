@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나를 소개합니다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=DM+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a class="nav-logo" href="#" onclick="showPage('home')">MY PAGE</a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home')"      data-page="home"      class="active">Home</a></li>
+      <li><a href="#" onclick="showPage('about')"     data-page="about">About</a></li>
+      <li><a href="#" onclick="showPage('dreams')"    data-page="dreams">Dreams</a></li>
+      <li><a href="#" onclick="showPage('interests')" data-page="interests">Interests</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       PAGE 1 — HOME
+  ══════════════════════════════════════ -->
+  <section id="page-home" class="page active">
+    <div class="hero">
+      <div class="profile-wrap fade-in">
+        <img
+          class="profile-img"
+          src="https://lh3.googleusercontent.com/d/1mTAR-ZvuVvPNF_UIn2z1w_tBNBrV_kH7"
+          alt="프로필 사진"
+        />
+      </div>
+
+      <div class="fade-in">
+        <p class="hero-sub">Self Introduction</p>
+        <h1 class="hero-name" id="typewriter"></h1>
+      </div>
+
+      <div class="divider fade-in"></div>
+
+      <p class="hero-desc fade-in">
+        옷에 관심이 조금 있고, 미래에 해외에서 살아보거나 일해보고 싶은 사람입니다.<br />
+        시간을 소중히 여기고 현실적으로 생각하는 것을 좋아합니다.
+      </p>
+
+      <p class="hero-address fade-in">📍 북악산로 831</p>
+
+      <div class="fade-in">
+        <button class="btn" onclick="showPage('about')">더 알아보기 →</button>
+      </div>
+    </div>
+
+    <!-- Quick nav cards -->
+    <div class="section">
+      <p class="section-label fade-in">Navigate</p>
+      <h2 class="section-title fade-in">페이지 안내</h2>
+      <div class="cards">
+        <div class="card fade-in" onclick="showPage('about')" style="cursor:pointer;">
+          <div class="card-icon">👤</div>
+          <div class="card-title">About Me</div>
+          <div class="card-text">나의 강점과<br/>개선하고 싶은 점</div>
+        </div>
+        <div class="card fade-in" onclick="showPage('dreams')" style="cursor:pointer;">
+          <div class="card-icon">✈️</div>
+          <div class="card-title">Dreams</div>
+          <div class="card-text">대학 생활 도전 목표, 졸업 후 꿈,<br/>그리고 패션 전시회 사진들</div>
+        </div>
+        <div class="card fade-in" onclick="showPage('interests')" style="cursor:pointer;">
+          <div class="card-icon">🎵</div>
+          <div class="card-title">Interests</div>
+          <div class="card-text">좋아하는 아이돌, 앨범,<br/>그리고 취미</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 · 북악산로 831 · Made with HTML / CSS / JS</p>
+    </footer>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PAGE 2 — ABOUT
+  ══════════════════════════════════════ -->
+  <section id="page-about" class="page">
+
+    <div class="section">
+      <p class="section-label fade-in">About Me</p>
+      <h2 class="section-title fade-in">나에 대해</h2>
+      <div class="cards">
+        <div class="card fade-in">
+          <div class="card-icon">✅</div>
+          <div class="card-title">나의 강점</div>
+          <div class="card-text">
+            시간 약속을 잘 지키며,<br />
+            사고가 현실적이고 합리적입니다.
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🌱</div>
+          <div class="card-title">개선하고 싶은 점</div>
+          <div class="card-text">
+            조바심을 느끼지 않기,<br />
+            너무 현실적으로만 생각하지 말기,<br />
+            희망적으로 생각해보기
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right; margin-top:2.5rem;">
+        <button class="btn" onclick="showPage('dreams')">Dreams →</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 · 북악산로 831 · Made with HTML / CSS / JS</p>
+    </footer>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PAGE 3 — DREAMS
+  ══════════════════════════════════════ -->
+  <section id="page-dreams" class="page">
+
+    <div class="section">
+      <p class="section-label fade-in">Dreams &amp; Goals</p>
+      <h2 class="section-title fade-in">꿈과 목표</h2>
+      <div class="cards">
+        <div class="card fade-in">
+          <div class="card-icon">👕</div>
+          <div class="card-title">대학 생활 동안 도전해 보고 싶은 일</div>
+          <div class="card-text">
+            옷가게 알바나, 옷에 관한 직업을 경험해보고 싶습니다.<br />
+            패션에 대한 관심을 실제 경험으로 연결하고 싶어요.
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">✈️</div>
+          <div class="card-title">졸업 후 하고 싶은 일</div>
+          <div class="card-text">
+            오랫동안 해외에서 살아보거나<br />
+            해외에서 일해보고 싶습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0;">
+      <p class="section-label fade-in">Gallery</p>
+      <h2 class="section-title fade-in">패션 전시회</h2>
+      <p class="fade-in" style="color:#aaa; font-size:0.9rem; margin-bottom:1.8rem;">
+        직접 방문한 패션 전시회에서 담은 사진들입니다.
+      </p>
+      <div class="photo-grid">
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/1vj-lIdpbZCZXUS52Uw4k3BkqQN66EZFs"
+          alt="패션 전시회 사진 1"
+        />
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/1hFfU_u46dSCypwADZ3GrCqMv5rTaYg3E"
+          alt="패션 전시회 사진 2"
+        />
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/1DG8FwDn3U6DiXIEuUWHWvZXWpdLVlk5W"
+          alt="패션 전시회 사진 3"
+        />
+      </div>
+      <div style="text-align:right; margin-top:2.5rem;">
+        <button class="btn" onclick="showPage('interests')">Interests →</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 · 북악산로 831 · Made with HTML / CSS / JS</p>
+    </footer>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PAGE 4 — INTERESTS
+  ══════════════════════════════════════ -->
+  <section id="page-interests" class="page">
+
+    <!-- 좋아하는 아이돌 -->
+    <div class="section">
+      <p class="section-label fade-in">My Favorite</p>
+      <h2 class="section-title fade-in">좋아하는 아이돌</h2>
+      <div class="idol-wrap">
+        <img
+          class="idol-img fade-in"
+          src="https://lh3.googleusercontent.com/d/1zTfTFkxx_nZDZx7lDB6ELrTXz3Pv63Bu"
+          alt="하츠투하츠 스텔라"
+        />
+        <div class="idol-info">
+          <p class="idol-name fade-in">스텔라 (Stella)</p>
+          <p class="idol-group fade-in">Hearts2Hearts · 하츠투하츠</p>
+          <p class="idol-text fade-in">
+            내가 좋아하는 아이돌은 하츠투하츠의 스텔라입니다.<br /><br />
+            하츠투하츠는 대한민국의 걸그룹으로,
+            스텔라는 그 중에서도 특히 좋아하는 멤버입니다.
+          </p>
+          <div style="margin-top:1.5rem;" class="fade-in">
+            <a
+              class="btn"
+              href="https://www.instagram.com/h2h__weverse/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >공식 인스타그램 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 좋아하는 앨범 -->
+    <div class="section" style="padding-top:0;">
+      <p class="section-label fade-in">Favorite Album</p>
+      <h2 class="section-title fade-in">좋아하는 앨범</h2>
+      <div class="album-wrap">
+        <img
+          class="album-img fade-in"
+          src="https://lh3.googleusercontent.com/d/1viosPyBjO3ifFkwVwWFCy08Qd-fesCqs"
+          alt="반타01 아름8 앨범 커버"
+        />
+        <div class="album-info">
+          <p class="album-title fade-in">아름8</p>
+          <p class="album-artist fade-in">반타01</p>
+          <p class="idol-text fade-in">
+            2026년 가장 좋아하는 앨범입니다.<br /><br />
+            반타01의 <em>아름8</em>은 가사와 음악 모두 인상 깊어,
+            즐겨 듣고 있는 앨범입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 취미 -->
+    <div class="section" style="padding-top:0;">
+      <p class="section-label fade-in">Hobby</p>
+      <h2 class="section-title fade-in">취미</h2>
+      <div class="card fade-in" style="max-width:500px;">
+        <div class="card-icon">📷</div>
+        <div class="card-title">혼자 돌아다니며 사진 찍기</div>
+        <div class="card-text">
+          혼자서 거리를 걸으며 눈에 띄는 장면들을<br />
+          사진으로 담는 것을 좋아합니다.
+        </div>
+      </div>
+
+      <div class="photo-grid" style="margin-top:1.8rem;">
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/10Nvk_voUotbRPxMP4SKlnc4E-8QrqBBg"
+          alt="취미 사진 1"
+        />
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/1UCwZ_b7yWL25f3a228X0B6yygBFhotUF"
+          alt="취미 사진 2"
+        />
+        <img
+          class="fade-in"
+          src="https://lh3.googleusercontent.com/d/1jScbDeEeGQuSF9PikWNGrZb3WkQGjgKS"
+          alt="취미 사진 3"
+        />
+      </div>
+
+      <div style="text-align:right; margin-top:3rem;" class="fade-in">
+        <button class="btn" onclick="showPage('home')">← Home</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 · 북악산로 831 · Made with HTML / CSS / JS</p>
+    </footer>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
